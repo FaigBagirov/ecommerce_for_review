@@ -1,4 +1,4 @@
-const {port} = require("../config");
+const {port} = require("./config");
 // const port = process.env.PORT || 8000;
 
 const express = require("express");
@@ -7,7 +7,7 @@ const db = require("./db");
 
 const app = express();
 //all routing code relies here in the routes module
-const routes = require("./api_routes/routes");
+const routes = require("./routes/shoppingRoutes");
 routes(app);
 
 var cors = require('cors'); 
