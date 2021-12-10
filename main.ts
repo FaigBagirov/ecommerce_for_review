@@ -1,5 +1,6 @@
-const {port} = require("./config");
 // const port = process.env.PORT || 8000;
+const {port} = require("./config"); 
+//This should be inside the separate route files, but I still have problems with importing the route files
 const addToCartController= require('./controllers/addToCart')
 
 const express = require("express");
@@ -9,16 +10,18 @@ const app = express();
 const bodyParser = require("body-parser");
 const db_test = require("./db_test");
 
-
+//I have problems with importing the routes file
+//Just ignoring it for now
 //all routing code relies here in the routes module
-const routes = require("./routes/shoppingRoutes");
+// const routes = require("./routes/shoppingRoutes");
 // routes(app);
 
-var cors = require('cors'); 
-app.use(cors());
+//Didn't need it yet
+// var cors = require('cors'); 
+// app.use(cors());
 
-//TODO: maybe have to move it above the routes(app); line
-//configuring express to use body-parser as middle-ware.
+//TODO: maybe have to move it above the "routes(app);"" line
+//configuring express to use body-parser as middle-ware to parse the body of post requests
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -33,10 +36,12 @@ router.post("/checkout", (req: any, res: any)=>{
 
 app.use(router);
 
+//Don't need it right now during the tests
 // app.get("/", (req: any, res: any)=>{
 //     console.log(`get request`, req)
 // })
 
+//Just to test connection with the database
 db_test.select('*', 'userCart');
 
 
