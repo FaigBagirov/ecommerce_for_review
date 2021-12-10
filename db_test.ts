@@ -23,7 +23,7 @@ let select = function (what: string, where: string){
     .then(function(data: any) {
         // success;
         console.log("success selecting: ", data);
-        console.log("typep of data: ", typeof data);
+        console.log('type of "select" data: ', typeof data);
 
     })
     .catch(function(error: any) {

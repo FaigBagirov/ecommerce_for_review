@@ -1,4 +1,4 @@
-
+export {};
 //Checks if everything is ok for starting database migration
 
 
