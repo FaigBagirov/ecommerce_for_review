@@ -12,7 +12,7 @@ type pgResult = {
 
 
 // Preparing the connection details:
-const dbConnection = 'postgres://sysadmin:Kuznec32@20.121.34.247:3105/testwebstore';
+const dbConnection = '';
 
 // Creating a new database instance from the connection details:
 const database = pgp(dbConnection);
