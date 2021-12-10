@@ -1,0 +1,1 @@
+//sequelize configs should be here

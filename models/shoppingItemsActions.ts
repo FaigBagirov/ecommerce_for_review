@@ -1,13 +1,17 @@
+
+//Here should be the actual database query codepaths
+//But it's not ready yet
+
 export {};
 const db = require('../config/config');
 const ShoppingItem = require('../entities/shopingItem');
 
 type shoppingItemsModel = {
-  getOne: (object) => object;
-  getAll: (object) => object;
-  add:    (object) => object;
-  update: (object) => object;
-  delete: (object) => object;
+  getOne: (arg0: object) => object;
+  getAll: (arg0: object) => object;
+  add:    (arg0: object) => object;
+  update: (arg0: object) => object;
+  delete: (arg0: object) => object;
 }
 
 // EMPTY OBJECT

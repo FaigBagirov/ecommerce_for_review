@@ -1,5 +1,3 @@
-// export {};//just to tell the typescript taht this is a module 
-
 interface ShoppingItemType  {
     productId: number;
     productQty: number;
@@ -8,11 +6,10 @@ interface ShoppingItemType  {
         userToken: string,
     };
 }
-
 class ShoppingItem implements ShoppingItemType{
     productId: number;
     productQty: number;
-    userData!: {
+    userData!: { //TODO: not sure if I can to use "!"" here 
         userID: string;
         userToken: string;
     };
@@ -23,8 +20,6 @@ class ShoppingItem implements ShoppingItemType{
         this.userData.userID = userData.userID;
         this.userData.userToken = userData.userToken;
     }
-
-
 }
 
 export {ShoppingItemType, ShoppingItem};
